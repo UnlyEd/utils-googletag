@@ -1,0 +1,32 @@
+{
+  "name": "unly-utils-googletag",
+  "version": "1.0.0",
+  "description": "helpers google tag manager",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UnlyEd/unly-utils-googletag.git"
+  },
+  "author": "unlyEd",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/UnlyEd/unly-utils-googletag/issues"
+  },
+  "homepage": "https://github.com/UnlyEd/unly-utils-googletag",
+  "jest": {
+    "verbose": true,
+    "testEnvironment": "node"
+  },
+  "scripts": {
+    "lint": "eslint . --cache --fix",
+    "test:once": "jest",
+    "test": "jest --watch",
+    "coverage": "jest --coverage"
+  },
+  "devDependencies": {
+    "eslint": "4.19.1",
+    "eslint-config-airbnb-base": "13.1.0",
+    "eslint-plugin-import": "2.14",
+    "jest": "23.6.0"
+  }
+}
