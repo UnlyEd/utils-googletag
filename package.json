@@ -1,18 +1,18 @@
 {
-  "name": "unly-utils-googletag",
+  "name": "@unly/utils-googletag",
   "version": "1.0.0",
   "description": "helpers google tag manager",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/UnlyEd/unly-utils-googletag.git"
+    "url": "git+https://github.com/UnlyEd/utils-googletag.git"
   },
   "author": "unlyEd",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/UnlyEd/unly-utils-googletag/issues"
+    "url": "https://github.com/UnlyEd/utils-googletag/issues"
   },
-  "homepage": "https://github.com/UnlyEd/unly-utils-googletag",
+  "homepage": "https://github.com/UnlyEd/utils-googletag",
   "jest": {
     "verbose": true,
     "testEnvironment": "node"
