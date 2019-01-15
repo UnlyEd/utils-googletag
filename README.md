@@ -7,22 +7,20 @@ Install:
 npm or yarn
 
 ```
-    npm install https://github.com/UnlyEd/unly-utils-googletag.git
+npm install https://github.com/UnlyEd/unly-utils-googletag.git
 ```
 
 Use:
 
 ```
-const { generateTracker } = require('unly-utils-googletag');
+const { gaPageview } = require('unly-utils-googletag');
 ```
 
 Library:
 
 |   | param(s)         |  |
 | :--------------- |:---------------:| :-----:|
-| generateTracker |  trackingId  | generate a tracker based on trackingId |
-| pageview   | trackingId, { url, path, title } |  |
-| gtagEvent  | { action, category, label, value } |  |
+| convertTrackingIDToGTag |  trackingId  | generate a tracker based on trackingId |
 | gaPageview  | tracker |  |
 | initializeAsHTML | trackingId | |
 

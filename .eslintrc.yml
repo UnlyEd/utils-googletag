@@ -14,6 +14,8 @@ rules:
   no-unused-vars: off
   import/prefer-default-export: false
   import/no-extraneous-dependencies: ["error", {"peerDependencies": true}] # XXX https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-extraneous-dependencies.md
+  no-underscore-dangle: off
+  no-trailing-spaces: warn
 env:
   jest: true
   browser: true
