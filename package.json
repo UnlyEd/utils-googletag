@@ -21,12 +21,23 @@
     "lint": "eslint . --cache --fix",
     "test:once": "jest",
     "test": "jest --watch",
-    "coverage": "jest --coverage"
+    "coverage": "jest --coverage",
+    "build": "rollup -c"
   },
   "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "7.2.2",
+    "@babel/preset-env": "7.3.1",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "^23.4.2",
+    "babel-loader": "8.0.5",
+    "babel-preset-es2015-rollup": "3.0.0",
     "eslint": "4.19.1",
     "eslint-config-airbnb-base": "13.1.0",
     "eslint-plugin-import": "2.14",
-    "jest": "23.6.0"
+    "jest": "23.6.0",
+    "rollup": "1.1.2",
+    "rollup-plugin-babel": "4.3.2",
+    "rollup-plugin-commonjs": "9.2.0"
   }
 }

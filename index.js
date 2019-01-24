@@ -1,15 +1,11 @@
 const {
-  pageview,
-  generateTracker,
-  gaPageview,
-  gtagEvent,
+  convertTrackingIDToGTag,
   initializeAsHTML,
+  gaPageview,
 } = require('./lib/googleTag');
 
 module.exports = {
-  pageview,
-  generateTracker,
-  gaPageview,
-  gtagEvent,
+  convertTrackingIDToGTag,
   initializeAsHTML,
+  gaPageview,
 };

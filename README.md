@@ -48,3 +48,13 @@ yarn run test:coverage
 ```
 yarn run lint
 ```
+
+### Test
+
+go to example folder open index.html and look at the console in browser
+
+### Build for testing
+Compil all files in lib folder to bundle.js inside example folder
+```
+yarn run build
+```
