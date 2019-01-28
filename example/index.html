@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>Example Gtag</title>
+    <!-- Google Analytics -->
+    <!-- The debug version of analytics.js should only be used during development and testing -->
+    <script>
+      (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+          (i[r].q = i[r].q || []).push(arguments);
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(window, document, 'script', 'https://www.google-analytics.com/analytics_debug.js', 'ga');
+
+      // Enabling trace debugging will output more verbose information to the console.
+      window.ga_debug = { trace: true };
+
+      ga('create', 'UA-45682348-3', 'auto');
+
+      //  You can disable the sendHitTask task and nothing will be sent to Gooogle Analytics
+      if (location.hostname === 'localhost') {
+        ga('set', 'sendHitTask', null);
+      }
+
+    </script>
+    <!-- googleTag lib to test -->
+    <script src="./bundle.js"></script>
+    <script defer>
+      (function () {
+
+        googleTag.initializeAsHTML('UA-45682348-3');
+
+        googleTag.gaPageview('UA-45682348-3');
+
+      })();
+    </script>
+  </head>
+  <body>
+    <h1>Hello</h1>
+  </body>
+</html>
