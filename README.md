@@ -19,13 +19,13 @@ This project is a transversal project, helpers for google tag manager
 npm or yarn
 
 ```
-npm install https://github.com/UnlyEd/unly-utils-googletag.git
+npm install @unly/utils-googletag
 ```
 
 Use:
 
 ```
-const { gaPageview, initializeAsHTML, convertTrackingIDToGTag } = require('unly-utils-googletag');
+const { gaPageview, initializeAsHTML, convertTrackingIDToGTag } = require('@unly/utils-googletag');
 ```
 
 ## API
