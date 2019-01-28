@@ -1,16 +1,43 @@
-const commonjs = require('rollup-plugin-commonjs');
-const babel = require('rollup-plugin-babel');
+import commonjs from 'rollup-plugin-commonjs';
+import babel from 'rollup-plugin-babel';
+import resolve from 'rollup-plugin-node-resolve';
 
-module.exports = {
-  input: 'index.js',
-  output: {
-    file: 'example/bundle.js',
-    format: 'iife',
-    name: 'googleTag',
-    exports: 'named',
-  },
-  plugins: [
-    commonjs(),
-    babel(),
-  ],
+const plugins = [
+  babel(),
+  resolve(),
+  commonjs(),
+];
+
+const inputPath = 'src/googleTag.js';
+
+const watch = {
+  exclude: 'node_modules/**',
+  include: 'src/**',
 };
+
+module.exports = [
+  { // generate a iife file in example
+    input: inputPath,
+    output:
+      {
+        file: 'example/bundle.js',
+        format: 'iife',
+        name: 'googleTag',
+        exports: 'named',
+      },
+    plugins,
+    watch,
+  },
+  {
+    input: inputPath,
+    output:
+      {
+        file: 'lib/index.js',
+        format: 'cjs',
+        name: 'googleTag',
+        exports: 'named',
+      },
+    plugins,
+    watch,
+  },
+];

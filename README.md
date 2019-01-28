@@ -2,7 +2,19 @@
 
 This project is a transversal project, helpers for google tag manager
 
-Install:
+<!-- toc -->
+
+- [Getting started](#getting-started)
+- [API](#api)
+- [Contributing](#contributing)
+  * [Getting started](#getting-started-1)
+  * [Test](#test)
+  * [Releasing and publishing](#releasing-and-publishing)
+- [License](#license)
+
+<!-- tocstop -->
+
+## Getting started
 
 npm or yarn
 
@@ -13,48 +25,49 @@ npm install https://github.com/UnlyEd/unly-utils-googletag.git
 Use:
 
 ```
-const { gaPageview } = require('unly-utils-googletag');
+const { gaPageview, initializeAsHTML, convertTrackingIDToGTag } = require('unly-utils-googletag');
 ```
 
-Library:
+## API
 
-|   | param(s)         |  |
-| :--------------- |:---------------:| :-----:|
-| convertTrackingIDToGTag |  trackingId  | generate a tracker based on trackingId |
-| gaPageview  | tracker |  |
-| initializeAsHTML | trackingId | |
+[API](./API.md)
 
-## Development
+---
 
-### Test
+## Contributing
 
-Run once:
+We gladly accept PRs, but please open an issue first so we can discuss it beforehand.
+
+### Getting started
+
 ```
-yarn run test:once
-```
+yarn start # Shortcut - Runs linter + build + tests in concurrent mode (watch mode)
 
-Watch:
-```
+OR run each process separately for finer control
+
+yarn lint
+yarn build
 yarn test
 ```
 
-Coverage:
-```
-yarn run test:coverage
-```
-
-### Lint
-
-```
-yarn run lint
-```
-
 ### Test
 
-go to example folder open index.html and look at the console in browser
+```
+yarn test # Run all tests, interactive and watch mode
+yarn test:once
+yarn test:coverage
+```
 
-### Build for testing
-Compil all files in lib folder to bundle.js inside example folder
+### Releasing and publishing
+
 ```
-yarn run build
+yarn releaseAndPublish # Shortcut - Will prompt for bump version, commit, create git tag, push commit/tag and publish to NPM
+
+yarn release # Will prompt for bump version, commit, create git tag, push commit/tag
+npm publish # Will publish to NPM
 ```
+
+## License
+
+MIT
+

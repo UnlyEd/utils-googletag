@@ -3,14 +3,20 @@
     [
       "@babel/preset-env",
       {
-        "targets": {
-          "browsers": "defaults"
-        },
         "modules": false
       }
     ]
   ],
   "ignore": [
     "**/*.test.js"
-  ]
+  ],
+  "env": {
+    "test": {
+      "presets": [
+        [
+          "@babel/preset-env"
+        ]
+      ]
+    }
+  }
 }

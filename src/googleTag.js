@@ -9,7 +9,7 @@
  * @param trackingId
  * @returns {string}
  */
-const convertTrackingIDToGTag = (trackingId) => {
+export const convertTrackingIDToGTag = (trackingId) => {
   const trakingCleanedId = trackingId.replace(new RegExp('-', 'g'), '_');
   return `gtag_${trakingCleanedId}`;
 };
@@ -22,7 +22,7 @@ const convertTrackingIDToGTag = (trackingId) => {
  *
  * @see https://developers.google.com/analytics/devguides/collection/analyticsjs/pages
  */
-const gaPageview = (trackingId, config = {}) => {
+export const gaPageview = (trackingId, config = {}) => {
   const {
     trackerTransform, location, page, title,
   } = Object.assign({
@@ -46,7 +46,7 @@ const gaPageview = (trackingId, config = {}) => {
  * @param config
  * @returns {string}
  */
-const initializeAsHTML = (trakingId, config = {}) => {
+export const initializeAsHTML = (trakingId, config = {}) => {
   const {
     trackerTransform, location, page, title,
   } = Object.assign({
@@ -70,10 +70,4 @@ const initializeAsHTML = (trakingId, config = {}) => {
       page_title: '${title}'
     });
   `;
-};
-
-module.exports = {
-  convertTrackingIDToGTag,
-  initializeAsHTML,
-  gaPageview,
 };
