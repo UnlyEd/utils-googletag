@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/UnlyEd/utils-googletag.svg?branch=master)](https://travis-ci.com/UnlyEd/utils-googletag)
+
 # Utils Googletag
 
 This project is a transversal project, helpers for google tag manager
