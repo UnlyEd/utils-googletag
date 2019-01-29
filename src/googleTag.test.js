@@ -2,7 +2,9 @@
  * @jest-environment jsdom
  */
 
-const { initializeAsHTML, gaPageview, convertTrackingIDToGTag } = require('./googleTag');
+import { gaPageview } from './gaPageview';
+import { initializeAsHTML } from './initializeAsHTML';
+import { convertTrackingIDToGTag } from './convertTrackingIDToGtag';
 
 const TRACKING_ID = 'UA-56789754-787879';
 

@@ -1,6 +1,10 @@
 import commonjs from 'rollup-plugin-commonjs';
 import babel from 'rollup-plugin-babel';
 import resolve from 'rollup-plugin-node-resolve';
+import fs from 'fs';
+
+const files = fs.readdirSync('./src', { withFileTypes: true });
+const filesToKeep = files.filter((fileName) => !/^\w*..test.js$/.test(fileName));
 
 const plugins = [
   babel(),
@@ -8,36 +12,21 @@ const plugins = [
   commonjs(),
 ];
 
-const inputPath = 'src/googleTag.js';
-
 const watch = {
   exclude: 'node_modules/**',
   include: 'src/**',
 };
 
-module.exports = [
-  { // generate a iife file in example
-    input: inputPath,
-    output:
+const filesConfiguration = (arrayOfFiles) => arrayOfFiles.map((filesName) => ({
+  input: `./src/${filesName}`,
+  output:
       {
-        file: 'example/bundle.js',
-        format: 'iife',
-        name: 'googleTag',
-        exports: 'named',
-      },
-    plugins,
-    watch,
-  },
-  {
-    input: inputPath,
-    output:
-      {
-        file: 'lib/index.js',
+        file: `./lib/${filesName}`,
         format: 'cjs',
-        name: 'googleTag',
         exports: 'named',
       },
-    plugins,
-    watch,
-  },
-];
+  plugins,
+  watch,
+}));
+
+export default filesConfiguration(filesToKeep);
