@@ -23,7 +23,8 @@
   },
   "jest": {
     "verbose": true,
-    "testEnvironment": "node"
+    "testEnvironment": "node",
+    "testURL": "http://localhost/"
   },
   "scripts": {
     "start": "cross-env-shell 'concurrently -p '{name}' -n 'lint,build,test' -c 'gray.bgWhite,yellow.bgBlue,green.bgWhite' \"yarn lint\" \"yarn build\" \"yarn test\"'",
@@ -49,7 +50,7 @@
     "@babel/core": "7.2.2",
     "@babel/preset-env": "7.2.3",
     "babel-core": "7.0.0-bridge.0",
-    "babel-jest": "23.6.0",
+    "babel-jest": "21.2.0",
     "babel-loader": "8.0.5",
     "babel-preset-es2015-rollup": "3.0.0",
     "cli-confirm": "1.0.1",
@@ -59,15 +60,14 @@
     "eslint-config-airbnb-base": "13.1.0",
     "eslint-plugin-import": "2.14",
     "eslint-watch": "4.0.2",
-    "jest": "23.6.0",
+    "jest": "21.2.1",
     "jsdoc-to-markdown": "4.0.1",
     "markdown-toc": "1.2.0",
     "rollup": "1.1.2",
     "rollup-plugin-babel": "4.3.2",
     "rollup-plugin-commonjs": "9.2.0",
-    "rollup-plugin-eslint": "5.0.0",
     "rollup-plugin-node-resolve": "4.0.0",
     "version-bump-prompt": "4.2.2",
-    "webpack": "4.29.0"
+    "webpack": "3.12.0"
   }
 }
