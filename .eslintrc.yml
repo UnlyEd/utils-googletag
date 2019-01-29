@@ -18,6 +18,6 @@ rules:
   no-trailing-spaces: warn
 env:
   jest: true
-  browser: true
   node: true
   es6: true
+  browser: true
