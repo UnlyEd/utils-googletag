@@ -1,6 +1,6 @@
 {
   "name": "@unly/utils-googletag",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "helpers google tag manager",
   "main": "lib/index.js",
   "repository": {
