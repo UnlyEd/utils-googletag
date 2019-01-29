@@ -1,6 +1,6 @@
 {
   "name": "@unly/utils-googletag",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "helpers google tag manager",
   "main": "lib/index.js",
   "repository": {
@@ -49,6 +49,7 @@
     "@babel/cli": "7.2.3",
     "@babel/core": "7.2.2",
     "@babel/preset-env": "7.2.3",
+    "@unly/cli-confirm": "1.1.1",
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "21.2.0",
     "babel-loader": "8.0.5",
