@@ -24,6 +24,10 @@
   "jest": {
     "verbose": true,
     "testEnvironment": "node",
+    "collectCoverage": true,
+    "coverageReporters": [
+      "lcov"
+    ],
     "testURL": "http://localhost/"
   },
   "scripts": {

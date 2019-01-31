@@ -618,6 +618,11 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.12.19.tgz#ca1018c26be01f07e66ac7fefbeb6407e4490c61"
   integrity sha512-2NVovndCjJQj6fUUn9jCgpP4WSqr+u1SoUZMZyJkhGeBFsm6dE46l31S7lPUYt9uQ28XI+ibrJA1f5XyH5HNtA==
 
+"@unly/cli-confirm@1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@unly/cli-confirm/-/cli-confirm-1.1.1.tgz#0d4f9ef44e3d142ad8d0ffe2037059d6ad118f56"
+  integrity sha512-OqjK3zNlhqBfd+G8y5qCXjYvh2FHg1FOOtns6Zy4hOGaVTyQcUR2AWoXXyF6AN852vsx6l7ctFXBWr5y20DrJw==
+
 abab@^1.0.3:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/abab/-/abab-1.0.4.tgz#5faad9c2c07f60dd76770f71cf025b62a63cfd4e"

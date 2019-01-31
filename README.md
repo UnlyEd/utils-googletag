@@ -1,4 +1,6 @@
 [![Build Status](https://travis-ci.com/UnlyEd/utils-googletag.svg?branch=master)](https://travis-ci.com/UnlyEd/utils-googletag)
+[![Maintainability](https://api.codeclimate.com/v1/badges/05706e666bcc599716ee/maintainability)](https://codeclimate.com/github/UnlyEd/utils-googletag/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/05706e666bcc599716ee/test_coverage)](https://codeclimate.com/github/UnlyEd/utils-googletag/test_coverage)
 
 # Utils Googletag
 

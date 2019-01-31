@@ -1,4 +1,4 @@
-import { convertTrackingIDToGTag } from './convertTrackingIDToGtag';
+import convertTrackingIDToGTag from './convertTrackingIDToGtag';
 
 /**
  * Send a page view by using the traditional window.ga function instead of window.gtag
@@ -8,7 +8,7 @@ import { convertTrackingIDToGTag } from './convertTrackingIDToGtag';
  *
  * @see https://developers.google.com/analytics/devguides/collection/analyticsjs/pages
  */
-export const gaPageview = (trackingId, config = {}) => {
+const gaPageview = (trackingId, config = {}) => {
   const {
     trackerTransform, location, page, title,
   } = Object.assign({
@@ -24,3 +24,5 @@ export const gaPageview = (trackingId, config = {}) => {
     title,
   });
 };
+
+export default gaPageview;

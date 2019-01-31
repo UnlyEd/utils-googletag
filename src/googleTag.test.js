@@ -2,9 +2,9 @@
  * @jest-environment jsdom
  */
 
-import { gaPageview } from './gaPageview';
-import { initializeAsHTML } from './initializeAsHTML';
-import { convertTrackingIDToGTag } from './convertTrackingIDToGtag';
+import gaPageview from './gaPageview';
+import initializeAsHTML from './initializeAsHTML';
+import convertTrackingIDToGTag from './convertTrackingIDToGtag';
 
 const TRACKING_ID = 'UA-56789754-787879';
 

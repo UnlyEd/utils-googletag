@@ -8,7 +8,9 @@
  * @param trackingId
  * @returns {string}
  */
-export const convertTrackingIDToGTag = (trackingId) => {
+const convertTrackingIDToGTag = (trackingId) => {
   const trakingCleanedId = trackingId.replace(new RegExp('-', 'g'), '_');
   return `gtag_${trakingCleanedId}`;
 };
+
+export default convertTrackingIDToGTag;

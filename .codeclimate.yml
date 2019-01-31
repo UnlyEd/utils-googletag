@@ -3,3 +3,8 @@ engines:
     eslint:
       enabled: true
       channel: "eslint-4"
+exclude_patterns:
+  - "lib/"
+  - "example/"
+  - "**/node_modules/"
+  - "**.test.js"
