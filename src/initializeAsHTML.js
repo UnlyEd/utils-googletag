@@ -1,23 +1,10 @@
-import convertTrackingIDToGtag from './convertTrackingIDToGtag';
-
 /**
  * Initialize Google Analytics and GTM.
  *
  * @param trakingId
- * @param config
  * @returns {string}
  */
-const initializeAsHTML = (trakingId, config = {}) => {
-  const {
-    trackerTransform, location, page, title,
-  } = Object.assign({
-    location: window.location.href,
-    page: window.location.pathname,
-    title: window.document.title,
-    trackerTransform: convertTrackingIDToGtag,
-  }, config);
-
-  return `
+const initializeAsHTML = (trakingId) => `
     window.dataLayer = window.dataLayer || [];
   
     function gtag() {
@@ -26,11 +13,10 @@ const initializeAsHTML = (trakingId, config = {}) => {
   
     gtag('js', new Date());
     gtag('config', '${trakingId}', {
-      page_location: '${location}',
-      page_path: '${page}',
-      page_title: '${title}'
+      page_location: window.location.href,
+      page_path: window.location.pathname,
+      page_title: window.document.title
     });
   `;
-};
 
 export default initializeAsHTML;
