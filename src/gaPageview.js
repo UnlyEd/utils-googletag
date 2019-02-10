@@ -8,20 +8,11 @@ import convertTrackingIDToGTag from './convertTrackingIDToGtag';
  *
  * @see https://developers.google.com/analytics/devguides/collection/analyticsjs/pages
  */
-const gaPageview = (trackingId, config = {}) => {
-  const {
-    trackerTransform, location, page, title,
-  } = Object.assign({
+const gaPageview = (trackingId) => {
+  window.ga(`${convertTrackingIDToGTag(trackingId)}.send`, 'pageview', {
     location: window.location.href,
     page: window.location.pathname,
     title: window.document.title,
-    trackerTransform: convertTrackingIDToGTag,
-  }, config);
-
-  window.ga(`${trackerTransform(trackingId)}.send`, 'gtagPageview', {
-    location,
-    page,
-    title,
   });
 };
 

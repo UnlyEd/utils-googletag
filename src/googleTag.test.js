@@ -35,22 +35,22 @@ describe('googleTag', () => {
   // `);
   // });
 
-  test('must return html with gtag config', () => {
-    const _gaPreview = jest.fn(gaPageview);
-
-    window.ga = (tracker, tag, params) => {
-      window.tracker = {
-        tracker,
-        tag,
-        title: params.location.title,
-      };
-    };
-    _gaPreview(TRACKING_ID, window);
-
-    expect(window.tracker).toEqual({
-      tracker: `${convertTrackingIDToGTag(TRACKING_ID)}.send`,
-      tag: 'gtagPageview',
-      title: undefined,
-    });
-  });
+  // test('must return html with gtag config', () => {
+  //   const _gaPreview = jest.fn(gaPageview);
+  //
+  //   window.ga = (tracker, tag, params) => {
+  //     window.tracker = {
+  //       tracker,
+  //       tag,
+  //       title: params.location.title,
+  //     };
+  //   };
+  //   _gaPreview(TRACKING_ID, window);
+  //
+  //   expect(window.tracker).toEqual({
+  //     tracker: `${convertTrackingIDToGTag(TRACKING_ID)}.send`,
+  //     tag: 'gtagPageview',
+  //     title: undefined,
+  //   });
+  // });
 });

@@ -9,7 +9,7 @@
 <p>XXX This relies on gtag internal behavior, which creates a dynamic tracker based on the GA_TRACKING_ID
 For instance, it creates a tracker named &#39;gtag_UA_XXX_X.send&#39; for &quot;send&quot; events.</p>
 </dd>
-<dt><a href="#initializeAsHTML">initializeAsHTML(trakingId, config)</a> ⇒ <code>string</code></dt>
+<dt><a href="#initializeAsHTML">initializeAsHTML(trakingId)</a> ⇒ <code>string</code></dt>
 <dd><p>Initialize Google Analytics and GTM.</p>
 </dd>
 </dl>
@@ -42,7 +42,7 @@ For instance, it creates a tracker named 'gtag_UA_XXX_X.send' for "send" events.
 **See**: https://developers.google.com/analytics/devguides/collection/analyticsjs/pages  
 <a name="initializeAsHTML"></a>
 
-## initializeAsHTML(trakingId, config) ⇒ <code>string</code>
+## initializeAsHTML(trakingId) ⇒ <code>string</code>
 Initialize Google Analytics and GTM.
 
 **Kind**: global function  
@@ -50,5 +50,4 @@ Initialize Google Analytics and GTM.
 | Param |
 | --- |
 | trakingId | 
-| config | 
 
